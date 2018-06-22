@@ -8,8 +8,9 @@
 #import "VCButton.h"
 #import "VCHeader.h"
 #import "ViewController.h"
+#import "VCImagePickerController.h"
 
-@interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController ()<VCImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -34,11 +35,10 @@
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
         
     }
-    UIImagePickerController *imgPickerController = [[UIImagePickerController alloc] init];
+    VCImagePickerController *imgPickerController = [[VCImagePickerController alloc] init];
     imgPickerController.allowsEditing = YES;
     imgPickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//    imgPickerController.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
-    imgPickerController.delegate = self;
+    imgPickerController.vcDelegate = self;
     dispatch_async(dispatch_get_main_queue(), ^{
 //        if (![self.navigationController.topViewController isKindOfClass:[UIImagePickerController class]]) {
 //            [self.navigationController pushViewController:imgPickerController animated:YES];
@@ -51,17 +51,27 @@
 }
 #pragma mark - Delegate
 #pragma mark - UIImagePickerControllerDelegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+- (void)imagePickerControllerDidCancel:(VCImagePickerController *)picker
 {
-    NSLog(@"pick image");
+    
+}
+
+- (void)imagePickerControllerDidFinish:(VCImagePickerController *)picker
+{
+    
 }
 
 #pragma mark - Private Method
 - (void)injected
 {
+//    self.view.backgroundColor = [UIColor yellowColor];
     NSLog(@"I've been injected : %@", self);
 }
 
+- (void)authorized
+{
+//    [auth];
+}
 
 
 @end
