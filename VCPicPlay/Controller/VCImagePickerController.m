@@ -39,7 +39,7 @@ static char attachSelfKey;
         
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            Class targetClass = [NSClassFromString(@"PUPhotosGridViewController") class];
+            Class targetClass = [NSClassFromString(@"PUPhotoPickerHostViewController") class];
             SEL replaceSelector = @selector(override_collectionView:cellForItemAtIndexPath:);
             Method m1 = class_getInstanceMethod([self class], replaceSelector);
             class_addMethod(targetClass, replaceSelector, method_getImplementation(m1), method_getTypeEncoding(m1));
@@ -48,11 +48,11 @@ static char attachSelfKey;
             
             //            Method m2 = class_getInstanceMethod(targetClass, replaceSelector);
             
-            SEL replaceSelector2 = @selector(override_collectionView:didSelectItemAtIndexPath:);
-            Method m2 = class_getInstanceMethod([self class], replaceSelector);
-            class_addMethod(targetClass, replaceSelector2, method_getImplementation(m2), method_getTypeEncoding(m2));
-            Method m4 = class_getInstanceMethod(targetClass, @selector(collectionView:didSelectItemAtIndexPath:));
-            method_exchangeImplementations(m2, m4);
+//            SEL replaceSelector2 = @selector(override_collectionView:didSelectItemAtIndexPath:);
+//            Method m2 = class_getInstanceMethod([self class], replaceSelector);
+//            class_addMethod(targetClass, replaceSelector2, method_getImplementation(m2), method_getTypeEncoding(m2));
+//            Method m4 = class_getInstanceMethod(targetClass, @selector(collectionView:didSelectItemAtIndexPath:));
+//            method_exchangeImplementations(m2, m4);
 
         });
     }
@@ -61,7 +61,7 @@ static char attachSelfKey;
 
 - (UIBarButtonItem *)doneBtn
 {
-    if (_doneBtn == nil) {
+    if (!_doneBtn) {
         _doneBtn = [[UIBarButtonItem alloc] initWithTitle:self.doneBtnTitle style:UIBarButtonItemStyleDone target:self action:@selector(done:)];
     }
     return _doneBtn;
@@ -212,6 +212,23 @@ static char attachSelfKey;
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     UIView *collectionView = [self getPUCollectionView:viewController.view];
+    
+    unsigned int count = 0;
+    Ivar *ivars = class_copyIvarList([viewController class], &count);
+    for (int index = 0; index < count; index++) {
+        Ivar ivar = ivars[index];
+        const char *name = ivar_getName(ivar);
+        NSString *key = [NSString stringWithUTF8String:name];
+        id value = [viewController valueForKey:key];
+        
+        NSLog(@"%@ - %@ —— %@", key, value, [value class]);
+        if ([value isKindOfClass:[UIView class]]) {
+            NSLog(@"%@" , [value superview]);
+        }
+    }
+    free(ivars);
+    
+    
     self.interactivePopGestureRecognizer.enabled = NO;
  
     if (!collectionView) {
@@ -229,6 +246,11 @@ static char attachSelfKey;
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
+    /**
+     * 如果此子类示例被设置了allowEditing = YES;
+     * 当前方法就不走了
+     */
+    
     UIImage *img = info[UIImagePickerControllerOriginalImage];
     
     if ([self isIndexPathExist]) {
@@ -247,6 +269,9 @@ static char attachSelfKey;
             picker.topViewController.navigationItem.rightBarButtonItem = self.lastDoneBtn;
         }
     });
+    if ([self.vcDelegate respondsToSelector:@selector(imagePickerControllerDidFinish:)]) {
+        [self.vcDelegate imagePickerControllerDidFinish:self];
+    }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -288,5 +313,10 @@ static char attachSelfKey;
     return _selectedImgs;
 }
 
+- (void)setVcDelegate:(id<VCImagePickerControllerDelegate>)vcDelegate
+{
+    _vcDelegate = vcDelegate;
+    
+}
 
 @end

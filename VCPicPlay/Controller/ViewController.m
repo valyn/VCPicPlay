@@ -32,11 +32,9 @@
 
 - (void)pickPhoto
 {
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
-        
-    }
     VCImagePickerController *imgPickerController = [[VCImagePickerController alloc] init];
-    imgPickerController.allowsEditing = YES;
+    imgPickerController.doneBtnTitle = @"OK";
+//    imgPickerController.allowsEditing = YES; //加了这句，点击照片就直接进入展示页
     imgPickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imgPickerController.vcDelegate = self;
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -46,9 +44,9 @@
         [self presentViewController:imgPickerController animated:YES completion:^{
 
         }];
-//        [self.view addSubview:imgPickerController.view];
     });
 }
+
 #pragma mark - Delegate
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerControllerDidCancel:(VCImagePickerController *)picker

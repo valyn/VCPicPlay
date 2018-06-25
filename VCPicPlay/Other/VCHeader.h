@@ -12,9 +12,9 @@
 
 
 #ifdef DEBUG
-#define VCLog(...) NSLog(__VA_ARGS__)
+#define VCLog(fmt,...); NSLog((fmt),__VA_ARGS__);
 #else
-#define VCLog(...) //NSLog(__VA_ARGS__)
+#define VCLog(...);
 #endif
 
 
