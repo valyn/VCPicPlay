@@ -10,6 +10,7 @@
 		E5345DEF20DBDEC40011A0D9 /* VCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5345DEE20DBDEC40011A0D9 /* VCImagePickerController.m */; };
 		E5345EA520DCDFB20011A0D9 /* VCPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5345EA320DCDFB20011A0D9 /* VCPickerChecked@2x.png */; };
 		E5345EA620DCDFB20011A0D9 /* VCPickerChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5345EA420DCDFB20011A0D9 /* VCPickerChecked@3x.png */; };
+		E53464EB20E1E3350011A0D9 /* VCCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53464EA20E1E3350011A0D9 /* VCCollectionView.m */; };
 		E5EDDD3920DBA3A200E7941E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EDDD3820DBA3A200E7941E /* AppDelegate.m */; };
 		E5EDDD3F20DBA3A200E7941E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5EDDD3D20DBA3A200E7941E /* Main.storyboard */; };
 		E5EDDD4120DBA3A400E7941E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EDDD4020DBA3A400E7941E /* Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		E5345DEE20DBDEC40011A0D9 /* VCImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCImagePickerController.m; sourceTree = "<group>"; };
 		E5345EA320DCDFB20011A0D9 /* VCPickerChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCPickerChecked@2x.png"; sourceTree = "<group>"; };
 		E5345EA420DCDFB20011A0D9 /* VCPickerChecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCPickerChecked@3x.png"; sourceTree = "<group>"; };
+		E53464E920E1E3350011A0D9 /* VCCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCollectionView.h; sourceTree = "<group>"; };
+		E53464EA20E1E3350011A0D9 /* VCCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCollectionView.m; sourceTree = "<group>"; };
 		E5EDDD3420DBA3A200E7941E /* VCPicPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCPicPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EDDD3720DBA3A200E7941E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5EDDD3820DBA3A200E7941E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 			children = (
 				E5EDDD7B20DBA5D400E7941E /* VCButton.h */,
 				E5EDDD7C20DBA5D400E7941E /* VCButton.m */,
+				E53464E920E1E3350011A0D9 /* VCCollectionView.h */,
+				E53464EA20E1E3350011A0D9 /* VCCollectionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				E5EDDD4720DBA3A400E7941E /* main.m in Sources */,
 				E5EDDD7D20DBA5D400E7941E /* VCButton.m in Sources */,
 				E5EDDD8220DBB97B00E7941E /* UIView+Frame.m in Sources */,
+				E53464EB20E1E3350011A0D9 /* VCCollectionView.m in Sources */,
 				E5345DEF20DBDEC40011A0D9 /* VCImagePickerController.m in Sources */,
 				E5EDDD3920DBA3A200E7941E /* AppDelegate.m in Sources */,
 			);

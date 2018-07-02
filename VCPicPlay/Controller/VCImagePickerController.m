@@ -25,6 +25,7 @@ static char attachSelfKey;
 @property (nonatomic, strong) id lastdDelegate;
 @property (nonatomic, readwrite, strong) UICollectionView *collectionView;
 
+@property (nonatomic, strong) UIView *selectedImgCollectionView;
 
 
 @end
@@ -57,14 +58,6 @@ static char attachSelfKey;
         });
     }
     return self;
-}
-
-- (UIBarButtonItem *)doneBtn
-{
-    if (!_doneBtn) {
-        _doneBtn = [[UIBarButtonItem alloc] initWithTitle:self.doneBtnTitle style:UIBarButtonItemStyleDone target:self action:@selector(done:)];
-    }
-    return _doneBtn;
 }
 
 - (void)done:(UIBarButtonItem *) sender
@@ -317,6 +310,23 @@ static char attachSelfKey;
 {
     _vcDelegate = vcDelegate;
     
+}
+
+- (UIBarButtonItem *)doneBtn
+{
+    if (!_doneBtn) {
+        _doneBtn = [[UIBarButtonItem alloc] initWithTitle:self.doneBtnTitle style:UIBarButtonItemStyleDone target:self action:@selector(done:)];
+    }
+    return _doneBtn;
+}
+
+- (UIView *)selectedImgCollectionView
+{
+    if (!_selectedImgCollectionView) {
+        _selectedImgCollectionView = [[UIView alloc] init];
+        
+    }
+    return _selectedImgCollectionView;
 }
 
 @end

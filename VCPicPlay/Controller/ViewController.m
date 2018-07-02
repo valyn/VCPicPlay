@@ -41,10 +41,16 @@
 //        if (![self.navigationController.topViewController isKindOfClass:[UIImagePickerController class]]) {
 //            [self.navigationController pushViewController:imgPickerController animated:YES];
 //        }
+        [self.view addSubview:imgPickerController.view];
         [self presentViewController:imgPickerController animated:YES completion:^{
 
         }];
     });
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
 }
 
 #pragma mark - Delegate
