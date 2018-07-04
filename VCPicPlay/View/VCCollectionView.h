@@ -8,35 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-
-@protocol VCCollectionViewDelegateLayout<UICollectionViewDelegateFlowLayout>
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section;
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section;
-
-
-@end
-
-
-@interface VCCollectionViewLayout : UICollectionViewFlowLayout
-
-@property (nonatomic, weak) id <VCCollectionViewDelegateLayout> delegate;
-
-
-@end
-
-
-
+typedef void (^EventBlock)();
 
 
 
 @interface VCCollectionView : UIView
 
-@property (nonatomic, strong) NSArray *imgArr;
+@property (nonatomic, strong) NSMutableArray *imgArr;
+@property (nonatomic, copy) EventBlock removeBlk;
+@property (nonatomic, copy) EventBlock finishBlk;
 
+- (void)reloadData;
 
 @end

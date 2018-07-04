@@ -10,6 +10,7 @@
 #define VCHeader_h
 
 
+#define VCImageBlueColor ColorWithRGBA(30, 124, 230, 1)
 
 #ifdef DEBUG
 #define VCLog(fmt,...); NSLog((fmt),__VA_ARGS__);

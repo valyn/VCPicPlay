@@ -57,7 +57,7 @@
     return CGRectGetWidth(self.frame);
 }
 
-- (CGFloat)Height
+- (CGFloat)height
 {
     return CGRectGetHeight(self.frame);
 }

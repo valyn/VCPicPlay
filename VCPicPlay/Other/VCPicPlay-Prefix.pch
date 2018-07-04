@@ -1,0 +1,15 @@
+//
+//  VCPicPlay-Prefix.pch
+//  VCPicPlay
+//
+//  Created by Valyn on 2018/7/4.
+//  Copyright © 2018年 Valyn. All rights reserved.
+//
+
+#ifndef VCPicPlay_Prefix_h
+#define VCPicPlay_Prefix_h
+
+#import "VCHeader.h"
+#import "UIView+Frame.h"
+
+#endif /* VCPicPlay_Prefix_h */

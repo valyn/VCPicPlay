@@ -22,7 +22,7 @@
 - (CGFloat)x;
 - (CGFloat)y;
 - (CGFloat)width;
-- (CGFloat)Height;
+- (CGFloat)height;
 
 - (CGSize)size;
 - (CGPoint)origin;

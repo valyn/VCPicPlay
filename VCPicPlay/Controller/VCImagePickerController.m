@@ -34,6 +34,7 @@ static char attachSelfKey;
 
 - (instancetype)init
 {
+    
     if (self = [super init]) {
         self.delegate = self;
 //        self.doneBtnTitle = @"Done";
