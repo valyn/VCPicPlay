@@ -30,7 +30,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552404877.4493639"
+            timestampString = "552477958.151333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
@@ -46,7 +46,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552404877.449442"
+            timestampString = "552477958.1516581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
@@ -62,11 +62,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552404877.449502"
+            timestampString = "552477958.151747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "-setImgArr:"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,7 +78,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552404877.4495569"
+            timestampString = "552477958.151817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "162"
@@ -90,16 +90,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/Controller/VCImageEditViewController.m"
-            timestampString = "552404877.449614"
+            timestampString = "552477958.151889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-drawInCanvas"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-drawImage:inRect:inContext:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -109,13 +109,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VCPicPlay/Controller/VCImageEditViewController.m"
-            timestampString = "552404877.449679"
+            filePath = "VCPicPlay/Controller/VCImagesPickerController.m"
+            timestampString = "552477958.152651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-drawImage:inRect:inContext:"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VCPicPlay/Controller/VCImageEditViewController.m"
+            timestampString = "552477958.152914"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-drawInCanvas"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VCPicPlay/Controller/VCImageEditViewController.m"
+            timestampString = "552477958.153208"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-drawInCanvas"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

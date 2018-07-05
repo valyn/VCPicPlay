@@ -162,6 +162,13 @@ static NSString *reuseIdentifier = @"VCCollectionViewCell";
     return CGSizeMake(_collectionView.height, _collectionView.height);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.disposeImgBlk) {
+        self.disposeImgBlk(((VCCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath]).image);
+    }
+}
+
  - (void)reloadData
 {
     [_collectionView reloadData];

@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^EventBlock)();
-
-
+typedef void (^DisposeBlock)(UIImage *img);
 
 @interface VCCollectionView : UIView
 
 @property (nonatomic, strong) NSMutableArray *imgArr;
 @property (nonatomic, copy) EventBlock removeBlk;
 @property (nonatomic, copy) EventBlock finishBlk;
+@property (nonatomic, copy) DisposeBlock disposeImgBlk;
 
 - (void)reloadData;
 

@@ -26,6 +26,7 @@
 		E5EDDD8220DBB97B00E7941E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EDDD8120DBB97B00E7941E /* UIView+Frame.m */; };
 		E5FE015120ECF19200EDDE3F /* VCImageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015020ECF19200EDDE3F /* VCImageEditViewController.m */; };
 		E5FE015420ECFC7300EDDE3F /* VCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015320ECFC7300EDDE3F /* VCCanvas.m */; };
+		E5FE015920EE0F3A00EDDE3F /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015820EE0F3900EDDE3F /* UIImage+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		E5FE015020ECF19200EDDE3F /* VCImageEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCImageEditViewController.m; sourceTree = "<group>"; };
 		E5FE015220ECFC7300EDDE3F /* VCCanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCanvas.h; sourceTree = "<group>"; };
 		E5FE015320ECFC7300EDDE3F /* VCCanvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCanvas.m; sourceTree = "<group>"; };
+		E5FE015720EE0F3900EDDE3F /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		E5FE015820EE0F3900EDDE3F /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +232,8 @@
 				E5FE014E20ECDD0E00EDDE3F /* VCPicPlay-Prefix.pch */,
 				E5EDDD8020DBB97B00E7941E /* UIView+Frame.h */,
 				E5EDDD8120DBB97B00E7941E /* UIView+Frame.m */,
+				E5FE015720EE0F3900EDDE3F /* UIImage+Category.h */,
+				E5FE015820EE0F3900EDDE3F /* UIImage+Category.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 			files = (
 				E5EDDD7A20DBA54500E7941E /* ViewController.m in Sources */,
 				E5FE015120ECF19200EDDE3F /* VCImageEditViewController.m in Sources */,
+				E5FE015920EE0F3A00EDDE3F /* UIImage+Category.m in Sources */,
 				E5EDDD4720DBA3A400E7941E /* main.m in Sources */,
 				E5EDDD7D20DBA5D400E7941E /* VCButton.m in Sources */,
 				E5EDDD8220DBB97B00E7941E /* UIView+Frame.m in Sources */,

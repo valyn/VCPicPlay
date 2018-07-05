@@ -11,5 +11,6 @@
 
 #import "VCHeader.h"
 #import "UIView+Frame.h"
+#import "VCCanvas.h"
 
 #endif /* VCPicPlay_Prefix_h */

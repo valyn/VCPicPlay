@@ -8,6 +8,7 @@
 
 #import <Photos/Photos.h>
 #import <PhotosUI/PhotosUI.h>
+#import <PhotosUI/PHContentEditingController.h>
 #import "VCCollectionView.h"
 #import "VCImagesPickerController.h"
 #import "VCImageEditViewController.h"
@@ -17,6 +18,8 @@ static NSString * const reuseIdentifier = @"VCImageCollectionViewCell";
 @interface VCImagesCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, assign, getter=isChecked) BOOL check;
+
+@property (nonatomic, strong) UIImage *image;
 
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIImageView *indicatorImgView;
@@ -31,6 +34,7 @@ static NSString * const reuseIdentifier = @"VCImageCollectionViewCell";
     if (self = [super initWithFrame:frame]) {
         _imgView = [UIImageView new];
         [self addSubview:_imgView];
+        
         _indicatorImgView = [UIImageView new];
         [self addSubview:_indicatorImgView];
         _indicatorImgView.image = [UIImage imageNamed:@"VCPickerChecked"];
@@ -39,10 +43,36 @@ static NSString * const reuseIdentifier = @"VCImageCollectionViewCell";
     return self;
 }
 
+- (void)setImage:(UIImage *)image
+{
+    _image = image;
+    self.imgView.image = image;
+    //    [self setNeedsLayout];
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    _imgView.frame = CGRectMake(2, 2, self.width - 4, self.height - 4);
+    
+    //    float width = 0;
+    //    float height = 0;
+    //    float ratioW = self.imgView.image.size.width / self.width;
+    //    float ratioH = self.imgView.image.size.height / self.height;
+    //
+    //    if (self.imgView.image.size.width > self.imgView.image.size.height) {
+    //
+    //        width = self.imgView.image.size.width / ratioW ;
+    //        height = self.imgView.image.size.height / ratioW;
+    //    } else {
+    //
+    //        width = self.imgView.image.size.width / ratioH;
+    //        height = self.imgView.image.size.height / ratioH;
+    //    }
+    //
+    
+    _imgView.frame = CGRectMake(0, 0, self.width, self.height);
+    //    _imgView.center = self.center;
+    
     _indicatorImgView.frame = CGRectMake(self.width - 30, self.height - 30, 25, 25);
 }
 
@@ -107,6 +137,10 @@ static NSString * const reuseIdentifier = @"VCImageCollectionViewCell";
             }
         });
     };
+    _selectedCollectionView.disposeImgBlk = ^(UIImage *img) {
+      
+    };
+    
     [self.view addSubview:_selectedCollectionView];
     _selectedCollectionView.frame = CGRectMake(0, self.view.height - 100, self.view.width, 100);
     
@@ -117,17 +151,18 @@ static NSString * const reuseIdentifier = @"VCImageCollectionViewCell";
     option.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];//PHAsset 的属性: creationDate......
     PHFetchResult *fetchResult = [PHAsset fetchAssetsWithOptions:option];
     
-    [fetchResult enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [fetchResult enumerateObjectsUsingBlock:^(PHAsset *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         PHImageRequestOptions *requestOptions = [PHImageRequestOptions new];
         requestOptions.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
         requestOptions.networkAccessAllowed = YES;
         [[PHImageManager defaultManager] requestImageForAsset:obj targetSize:[UIScreen mainScreen].bounds.size contentMode:PHImageContentModeAspectFit options:requestOptions resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            //            NSLog(@"%@", info);
-            //            NSString *filePath = [info valueForKey:@"PHImageFileSandboxExtensionTokenKey"];
-            [imgArr addObject:[result copy]];
             
-            if (imgArr.count == fetchResult.count) {
+            if (obj.mediaType == PHAssetMediaTypeImage) {
+                [imgArr addObject:[result copy]];
+            }
+            
+            if (idx == fetchResult.count - 1) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     selfWeak.photos = imgArr;
                 });
@@ -182,7 +217,7 @@ static NSString * const reuseIdentifier = @"VCImageCollectionViewCell";
     
     ////    NSLayoutConstraint *layout = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imgV]-0-|" options:NSLayoutFormatAlignAllLastBaseline metrics:nil views:imgV];
     ////    [imgV addConstraint:layout];
-    cell.imgView.image = _photos[indexPath.row];
+    cell.image = _photos[indexPath.row];
     cell.check = [self.selectedPhotos containsObject:cell.imgView.image];
     
     return cell;

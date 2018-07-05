@@ -5,6 +5,7 @@
 //  Created by Valyn on 2018/6/21.
 //  Copyright © 2018年 Valyn. All rights reserved.
 //
+
 #import <Photos/Photos.h>
 #import <PhotosUI/PhotosUI.h>
 #import "VCButton.h"
@@ -23,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     
     VCButton *btn = [VCButton buttonWithType:UIButtonTypeCustom];
@@ -54,6 +57,10 @@
 
 - (void)stitchingPhoto
 {
+    
+//    [self drawInCanvas];
+//    return;
+    
     if ([PHPhotoLibrary authorizationStatus] != PHAuthorizationStatusAuthorized) {
         return ;
     }
@@ -67,6 +74,20 @@
             [self.navigationController pushViewController:imgPickerController animated:YES];
         }
     });
+}
+
+- (void)drawInCanvas
+{
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, [UIScreen mainScreen].scale);
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    [self.view.layer renderInContext:contextRef];
+    
+    UIImage *im = [UIImage imageNamed:@"VCPickerChecked"];
+    [im drawAtPoint:CGPointMake(100, 0)];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    self.imgView.image = img;
 }
 
 - (void)pickPhoto

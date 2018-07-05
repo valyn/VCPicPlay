@@ -8,8 +8,9 @@
 
 #import "VCCanvas.h"
 #import "VCImageEditViewController.h"
+#import <PhotosUI/PHContentEditingController.h>
 
-@interface VCImageEditViewController ()
+@interface VCImageEditViewController ()<PHContentEditingController>
 
 @property (nonatomic, strong) UIView *toolBar;
 
@@ -53,27 +54,42 @@
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     [self.view.layer renderInContext:contextRef];
     float y = 64;
+    
+    UIImage *im = [UIImage imageNamed:@"VCPickerChecked"];
+    [im drawAtPoint:CGPointMake(100, 100)];
+    
     for (UIImage *img in self.imgs) {
-//        [self drawImage:img inRect:CGRectMake(0, 0, img.size.width, img.size.height) inContext:contextRef];
-        [img drawInRect:CGRectMake(0, 0, img.size.width * 0.2, img.size.height * 0.2)];
+        
+        float width = 0;
+        float height = 0;
+        float ratioW = img.size.width / self.view.width;
+        float ratioH = img.size.height / self.view.height;
+        
+        if (img.size.width > img.size.height) {
+            
+            width = img.size.width / ratioW ;
+            height = img.size.height / ratioW;
+        } else {
+            
+            width = img.size.width / ratioH;
+            height = img.size.height / ratioH;
+        }
+        
+        
+        
+        [img drawInRect:CGRectMake(0, 0, width, height)];
         [img drawAtPoint:CGPointZero];
-//        [@"TEXT" drawInRect:CGRectMake(0, 100, 200, 200) withAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:10]}];
-        
-        
-        
-        UIImageView *imgv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, img.size.width * 0.2, img.size.height * 0.2)];
-        [subView addSubview:imgv];
-        imgv.image = img;
-        
-        imgv.center = CGPointMake(400, y + imgv.height * 0.5);
-        y += imgv.height;
+        y += img.size.height * 0.1;
         
     }
     self.automaticallyAdjustsScrollViewInsets = NO;
     subView.contentSize = CGSizeMake(self.view.width, y);
-    UIGraphicsEndImageContext();
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
+    UIImageView *imgv = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    imgv.image = img;
+    [self.view addSubview:imgv];
 }
 
 - (void)drawImage:(UIImage *)img inRect:(CGRect)rect inContext:(CGContextRef)context
