@@ -10,6 +10,7 @@
 
 @interface VCCanvas : UIScrollView
 
+- (void)drawImage:(UIImage *)img;
 - (void)drawImages:(NSArray<UIImage *>*)imgs;
 
 @end

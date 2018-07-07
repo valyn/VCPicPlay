@@ -10,6 +10,7 @@
 #define VCPicPlay_Prefix_h
 
 #import "VCHeader.h"
+#import "VCButton.h"
 #import "UIView+Frame.h"
 #import "VCCanvas.h"
 

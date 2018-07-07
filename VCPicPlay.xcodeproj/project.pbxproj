@@ -27,6 +27,15 @@
 		E5FE015120ECF19200EDDE3F /* VCImageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015020ECF19200EDDE3F /* VCImageEditViewController.m */; };
 		E5FE015420ECFC7300EDDE3F /* VCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015320ECFC7300EDDE3F /* VCCanvas.m */; };
 		E5FE015920EE0F3A00EDDE3F /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015820EE0F3900EDDE3F /* UIImage+Category.m */; };
+		E5FE015E20EF126A00EDDE3F /* VCVanvasElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015D20EF126A00EDDE3F /* VCVanvasElement.m */; };
+		E5FE016720EF172A00EDDE3F /* VCEnlarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE015F20EF172A00EDDE3F /* VCEnlarge@2x.png */; };
+		E5FE016820EF172A00EDDE3F /* VCEnlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016020EF172A00EDDE3F /* VCEnlarge.png */; };
+		E5FE016920EF172A00EDDE3F /* VCRemove@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016120EF172A00EDDE3F /* VCRemove@3x.png */; };
+		E5FE016A20EF172A00EDDE3F /* VCEditImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016220EF172A00EDDE3F /* VCEditImage2.png */; };
+		E5FE016B20EF172A00EDDE3F /* VCEnlarge@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016320EF172A00EDDE3F /* VCEnlarge@3x.png */; };
+		E5FE016C20EF172A00EDDE3F /* VCEditImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016420EF172A00EDDE3F /* VCEditImage1.png */; };
+		E5FE016D20EF172A00EDDE3F /* VCRemove.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016520EF172A00EDDE3F /* VCRemove.png */; };
+		E5FE016E20EF172A00EDDE3F /* VCRemove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016620EF172A00EDDE3F /* VCRemove@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +94,16 @@
 		E5FE015320ECFC7300EDDE3F /* VCCanvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCanvas.m; sourceTree = "<group>"; };
 		E5FE015720EE0F3900EDDE3F /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		E5FE015820EE0F3900EDDE3F /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		E5FE015C20EF126A00EDDE3F /* VCVanvasElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCVanvasElement.h; sourceTree = "<group>"; };
+		E5FE015D20EF126A00EDDE3F /* VCVanvasElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCVanvasElement.m; sourceTree = "<group>"; };
+		E5FE015F20EF172A00EDDE3F /* VCEnlarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCEnlarge@2x.png"; sourceTree = "<group>"; };
+		E5FE016020EF172A00EDDE3F /* VCEnlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEnlarge.png; sourceTree = "<group>"; };
+		E5FE016120EF172A00EDDE3F /* VCRemove@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCRemove@3x.png"; sourceTree = "<group>"; };
+		E5FE016220EF172A00EDDE3F /* VCEditImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEditImage2.png; sourceTree = "<group>"; };
+		E5FE016320EF172A00EDDE3F /* VCEnlarge@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCEnlarge@3x.png"; sourceTree = "<group>"; };
+		E5FE016420EF172A00EDDE3F /* VCEditImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEditImage1.png; sourceTree = "<group>"; };
+		E5FE016520EF172A00EDDE3F /* VCRemove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCRemove.png; sourceTree = "<group>"; };
+		E5FE016620EF172A00EDDE3F /* VCRemove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCRemove@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +138,14 @@
 			children = (
 				E5345EA320DCDFB20011A0D9 /* VCPickerChecked@2x.png */,
 				E5345EA420DCDFB20011A0D9 /* VCPickerChecked@3x.png */,
+				E5FE016420EF172A00EDDE3F /* VCEditImage1.png */,
+				E5FE016220EF172A00EDDE3F /* VCEditImage2.png */,
+				E5FE016520EF172A00EDDE3F /* VCRemove.png */,
+				E5FE016620EF172A00EDDE3F /* VCRemove@2x.png */,
+				E5FE016120EF172A00EDDE3F /* VCRemove@3x.png */,
+				E5FE016020EF172A00EDDE3F /* VCEnlarge.png */,
+				E5FE015F20EF172A00EDDE3F /* VCEnlarge@2x.png */,
+				E5FE016320EF172A00EDDE3F /* VCEnlarge@3x.png */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -214,6 +241,8 @@
 				E53464EA20E1E3350011A0D9 /* VCCollectionView.m */,
 				E5FE015220ECFC7300EDDE3F /* VCCanvas.h */,
 				E5FE015320ECFC7300EDDE3F /* VCCanvas.m */,
+				E5FE015C20EF126A00EDDE3F /* VCVanvasElement.h */,
+				E5FE015D20EF126A00EDDE3F /* VCVanvasElement.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,11 +370,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FE016C20EF172A00EDDE3F /* VCEditImage1.png in Resources */,
+				E5FE016B20EF172A00EDDE3F /* VCEnlarge@3x.png in Resources */,
+				E5FE016920EF172A00EDDE3F /* VCRemove@3x.png in Resources */,
 				E5EDDD4420DBA3A400E7941E /* LaunchScreen.storyboard in Resources */,
+				E5FE016720EF172A00EDDE3F /* VCEnlarge@2x.png in Resources */,
 				E5EDDD4120DBA3A400E7941E /* Assets.xcassets in Resources */,
 				E5EDDD3F20DBA3A200E7941E /* Main.storyboard in Resources */,
+				E5FE016820EF172A00EDDE3F /* VCEnlarge.png in Resources */,
+				E5FE016A20EF172A00EDDE3F /* VCEditImage2.png in Resources */,
 				E5345EA620DCDFB20011A0D9 /* VCPickerChecked@3x.png in Resources */,
+				E5FE016D20EF172A00EDDE3F /* VCRemove.png in Resources */,
 				E5345EA520DCDFB20011A0D9 /* VCPickerChecked@2x.png in Resources */,
+				E5FE016E20EF172A00EDDE3F /* VCRemove@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +413,7 @@
 				E5EDDD4720DBA3A400E7941E /* main.m in Sources */,
 				E5EDDD7D20DBA5D400E7941E /* VCButton.m in Sources */,
 				E5EDDD8220DBB97B00E7941E /* UIView+Frame.m in Sources */,
+				E5FE015E20EF126A00EDDE3F /* VCVanvasElement.m in Sources */,
 				E53464EB20E1E3350011A0D9 /* VCCollectionView.m in Sources */,
 				E5FE015420ECFC7300EDDE3F /* VCCanvas.m in Sources */,
 				E5345DEF20DBDEC40011A0D9 /* VCImagePickerController.m in Sources */,

@@ -146,24 +146,38 @@ static NSString * const reuseIdentifier = @"VCImageCollectionViewCell";
     
     
     self.view.backgroundColor = [UIColor whiteColor];
-    NSMutableArray *imgArr = [NSMutableArray new];
+//    NSMutableArray *imgArr = [NSMutableArray new];
     PHFetchOptions *option = [PHFetchOptions new];
     option.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];//PHAsset 的属性: creationDate......
     PHFetchResult *fetchResult = [PHAsset fetchAssetsWithOptions:option];
     
+    NSMutableDictionary *tempDic = [NSMutableDictionary dictionary];
     [fetchResult enumerateObjectsUsingBlock:^(PHAsset *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
         PHImageRequestOptions *requestOptions = [PHImageRequestOptions new];
         requestOptions.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
         requestOptions.networkAccessAllowed = YES;
+        
+        /** asynchronize */
         [[PHImageManager defaultManager] requestImageForAsset:obj targetSize:[UIScreen mainScreen].bounds.size contentMode:PHImageContentModeAspectFit options:requestOptions resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             
             if (obj.mediaType == PHAssetMediaTypeImage) {
-                [imgArr addObject:[result copy]];
+//                [imgArr addObject:[result copy]];
+                [tempDic setObject:[result copy]  forKey:obj.creationDate];
+//                 [tempDic setObject:result  forKey:obj.creationDate];
             }
             
             if (idx == fetchResult.count - 1) {
                 dispatch_async(dispatch_get_main_queue(), ^{
+
+                    NSMutableArray *imgArr = [NSMutableArray new];
+                    NSArray *sortedKeys = [tempDic.allKeys sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+                        return [obj2 compare:obj1];
+                    }];
+                    /** sort by time ,descending */
+                    [sortedKeys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        NSLog(@"++++++%@" , obj);
+                        [imgArr addObject:[tempDic objectForKey:obj]];
+                    }];
                     selfWeak.photos = imgArr;
                 });
             }

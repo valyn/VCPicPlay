@@ -30,7 +30,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552477958.151333"
+            timestampString = "552557979.914004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
@@ -46,7 +46,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552477958.1516581"
+            timestampString = "552557979.91434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
@@ -62,7 +62,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552477958.151747"
+            timestampString = "552557979.914413"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "181"
@@ -78,7 +78,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/View/VCCollectionView.m"
-            timestampString = "552477958.151817"
+            timestampString = "552557979.914474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "162"
@@ -94,11 +94,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCPicPlay/Controller/VCImageEditViewController.m"
-            timestampString = "552477958.151889"
+            timestampString = "552557979.914543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-drawImage:inRect:inContext:"
             landmarkType = "7">
          </BreakpointContent>
@@ -109,44 +109,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VCPicPlay/Controller/VCImagesPickerController.m"
-            timestampString = "552477958.152651"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "VCPicPlay/Controller/VCImageEditViewController.m"
-            timestampString = "552477958.152914"
+            timestampString = "552557979.9147969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-drawInCanvas"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VCPicPlay/Controller/VCImageEditViewController.m"
-            timestampString = "552477958.153208"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-drawInCanvas"
             landmarkType = "7">
          </BreakpointContent>

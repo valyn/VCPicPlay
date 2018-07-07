@@ -7,23 +7,35 @@
 //
 
 #import "VCCanvas.h"
+#import "VCVanvasElement.h"
 
 @implementation VCCanvas
 
+#pragma mark - Life Cycle
+- (void)dealloc
+{
+    NSLog(@" ------------------------------ %@ dealloc ------------------------------", [self class]);
+}
+
+#pragma mark - Public Methods
+- (void)drawImage:(UIImage *)img
+{
+    VCVanvasElement *element = [VCVanvasElement elementWithImage:img];
+    @WeakObj(element);
+    element.removeBlk = ^{
+        [elementWeak removeFromSuperview];
+    };
+    [self addSubview:element];
+    element.bounds = CGRectMake(0, 0, 200, 200);
+    element.center = self.center;
+}
+
 - (void)drawImages:(NSArray<UIImage *> *)imgs
 {
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, [UIScreen mainScreen].scale);
-    CGContextRef contextRef = UIGraphicsGetCurrentContext();
-    
     for (UIImage *img in imgs) {
-        UIImageView *imgV = [[UIImageView alloc] initWithImage:img];
-        //        [self drawImage:img inRect:CGRectMake(0, 0, img.size.width, img.size.height) inContext:contextRef];
-        [img drawInRect:CGRectMake(0, 0, img.size.width * 0.2, img.size.height * 0.2)];
-        [imgV.layer renderInContext:contextRef];
+        [self drawImage:img];
     }
-    //    CGContextRelease(contextRef);
-    UIGraphicsEndImageContext();
-    
 }
+
 
 @end

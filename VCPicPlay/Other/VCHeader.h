@@ -10,6 +10,8 @@
 #define VCHeader_h
 
 
+typedef void (^EventBlock)();
+
 #define VCImageBlueColor ColorWithRGBA(30, 124, 230, 1)
 
 #ifdef DEBUG

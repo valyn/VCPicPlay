@@ -47,9 +47,10 @@
     VCCanvas *subView = [[VCCanvas alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:subView];
     
-    [subView drawImages:self.imgs];
+    [subView drawImage:[UIImage imageNamed:@"VCEditImage1"]];
+//    [subView drawImages:self.imgs];
     
-//    return;
+    return;
     UIGraphicsBeginImageContextWithOptions(subView.bounds.size, YES, [UIScreen mainScreen].scale);
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     [self.view.layer renderInContext:contextRef];

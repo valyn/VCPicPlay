@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^EventBlock)();
 typedef void (^DisposeBlock)(UIImage *img);
 
 @interface VCCollectionView : UIView

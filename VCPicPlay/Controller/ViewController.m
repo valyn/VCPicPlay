@@ -61,8 +61,13 @@
 //    [self drawInCanvas];
 //    return;
     
+    
     if ([PHPhotoLibrary authorizationStatus] != PHAuthorizationStatusAuthorized) {
-        return ;
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            if (status != PHAuthorizationStatusAuthorized) {
+                return ;
+            }
+        }];
     }
     
     VCImagesPickerController *imgPickerController = [[VCImagesPickerController alloc] init];

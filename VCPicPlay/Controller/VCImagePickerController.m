@@ -32,6 +32,12 @@ static char attachSelfKey;
 
 @implementation VCImagePickerController
 
+#pragma mark - Life Cycle
+- (void)dealloc
+{
+    NSLog(@" ------------------------------ %@ dealloc ------------------------------", [self class]);
+}
+
 - (instancetype)init
 {
     
@@ -60,6 +66,7 @@ static char attachSelfKey;
     }
     return self;
 }
+
 //
 //- (void)done:(UIBarButtonItem *) sender
 //{
