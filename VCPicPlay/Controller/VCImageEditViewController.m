@@ -40,6 +40,7 @@
     stripBtn.layer.borderColor = VCImageBlueColor.CGColor;
     stripBtn.layer.borderWidth = 1.0f;
     
+    [self drawInCanvas];
 }
 
 - (void)drawInCanvas

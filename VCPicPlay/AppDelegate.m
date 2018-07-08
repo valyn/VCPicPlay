@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "VCImageEditViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     
     self.window = [UIWindow new];
     [self.window makeKeyAndVisible];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[VCImageEditViewController new]];
     navi.view.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = navi;
     
