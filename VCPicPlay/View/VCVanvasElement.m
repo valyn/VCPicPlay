@@ -135,15 +135,14 @@
             float distance = [self distanceBetweenPointA:_originCenter pointB:currentPoint];
             float scale =  distance / orginDistance;
             NSLog(@"%f", scale);
-            
-            
-            float moveX = currentPoint.x - _lastPoint.x;
-            float moveY = currentPoint.y - _lastPoint.y;
-//            self.center = CGPointMake(self.originCenter.x + moveX, self.originCenter.y + moveY);
-            self.transform = CGAffineTransformMakeScale(scale, scale);
-            self.bounds = CGRectMake(0, 0, self.originWidth * scale, self.originHeight * scale);
-            self.center = self.center;
-            
+            if (scale > 0) {
+                float moveX = currentPoint.x - _lastPoint.x;
+                float moveY = currentPoint.y - _lastPoint.y;
+                //            self.center = CGPointMake(self.originCenter.x , self.originCenter.y + moveY);
+                //            self.transform = CGAffineTransformMakeScale(scale, scale);
+                self.bounds = CGRectMake(0, 0, self.originWidth * scale, self.originHeight * scale);
+                self.center = self.center;
+            }
         }
             break;
         case UIGestureRecognizerStateEnded:
@@ -232,7 +231,7 @@
         default:
             break;
     }
-    NSLog(@"%d" ,pinch.state);
+//    NSLog(@"%d" ,pinch.state);
 }
 
 #pragma mark - Setter && Getter

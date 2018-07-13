@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		E5345DEF20DBDEC40011A0D9 /* VCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5345DEE20DBDEC40011A0D9 /* VCImagePickerController.m */; };
-		E5345EA520DCDFB20011A0D9 /* VCPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5345EA320DCDFB20011A0D9 /* VCPickerChecked@2x.png */; };
-		E5345EA620DCDFB20011A0D9 /* VCPickerChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5345EA420DCDFB20011A0D9 /* VCPickerChecked@3x.png */; };
 		E53464EB20E1E3350011A0D9 /* VCCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53464EA20E1E3350011A0D9 /* VCCollectionView.m */; };
+		E577C18320F3361200724D3B /* VCEnlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C17920F3361200724D3B /* VCEnlarge.png */; };
+		E577C18420F3361200724D3B /* VCRemove.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C17A20F3361200724D3B /* VCRemove.png */; };
+		E577C18520F3361200724D3B /* VCRemove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C17B20F3361200724D3B /* VCRemove@2x.png */; };
+		E577C18620F3361200724D3B /* VCEnlarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C17C20F3361200724D3B /* VCEnlarge@2x.png */; };
+		E577C18720F3361200724D3B /* VCEnlarge@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C17D20F3361200724D3B /* VCEnlarge@3x.png */; };
+		E577C18820F3361200724D3B /* VCRemove@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C17E20F3361200724D3B /* VCRemove@3x.png */; };
+		E577C18920F3361200724D3B /* VCEditImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C17F20F3361200724D3B /* VCEditImage2.png */; };
+		E577C18A20F3361200724D3B /* VCEditImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C18020F3361200724D3B /* VCEditImage1.png */; };
+		E577C18B20F3361200724D3B /* VCPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C18120F3361200724D3B /* VCPickerChecked@2x.png */; };
+		E577C18C20F3361200724D3B /* VCPickerChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577C18220F3361200724D3B /* VCPickerChecked@3x.png */; };
 		E5AE5F9220EB23ED00E9AA01 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AE5F9120EB23ED00E9AA01 /* Photos.framework */; };
 		E5AE5F9420EB240200E9AA01 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AE5F9320EB240200E9AA01 /* PhotosUI.framework */; };
 		E5AE5F9A20EB750A00E9AA01 /* VCImagesPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AE5F9920EB750A00E9AA01 /* VCImagesPickerController.m */; };
@@ -28,14 +36,6 @@
 		E5FE015420ECFC7300EDDE3F /* VCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015320ECFC7300EDDE3F /* VCCanvas.m */; };
 		E5FE015920EE0F3A00EDDE3F /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015820EE0F3900EDDE3F /* UIImage+Category.m */; };
 		E5FE015E20EF126A00EDDE3F /* VCVanvasElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE015D20EF126A00EDDE3F /* VCVanvasElement.m */; };
-		E5FE016720EF172A00EDDE3F /* VCEnlarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE015F20EF172A00EDDE3F /* VCEnlarge@2x.png */; };
-		E5FE016820EF172A00EDDE3F /* VCEnlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016020EF172A00EDDE3F /* VCEnlarge.png */; };
-		E5FE016920EF172A00EDDE3F /* VCRemove@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016120EF172A00EDDE3F /* VCRemove@3x.png */; };
-		E5FE016A20EF172A00EDDE3F /* VCEditImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016220EF172A00EDDE3F /* VCEditImage2.png */; };
-		E5FE016B20EF172A00EDDE3F /* VCEnlarge@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016320EF172A00EDDE3F /* VCEnlarge@3x.png */; };
-		E5FE016C20EF172A00EDDE3F /* VCEditImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016420EF172A00EDDE3F /* VCEditImage1.png */; };
-		E5FE016D20EF172A00EDDE3F /* VCRemove.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016520EF172A00EDDE3F /* VCRemove.png */; };
-		E5FE016E20EF172A00EDDE3F /* VCRemove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FE016620EF172A00EDDE3F /* VCRemove@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +58,18 @@
 /* Begin PBXFileReference section */
 		E5345DED20DBDEC40011A0D9 /* VCImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCImagePickerController.h; sourceTree = "<group>"; };
 		E5345DEE20DBDEC40011A0D9 /* VCImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCImagePickerController.m; sourceTree = "<group>"; };
-		E5345EA320DCDFB20011A0D9 /* VCPickerChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCPickerChecked@2x.png"; sourceTree = "<group>"; };
-		E5345EA420DCDFB20011A0D9 /* VCPickerChecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCPickerChecked@3x.png"; sourceTree = "<group>"; };
 		E53464E920E1E3350011A0D9 /* VCCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCollectionView.h; sourceTree = "<group>"; };
 		E53464EA20E1E3350011A0D9 /* VCCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCollectionView.m; sourceTree = "<group>"; };
+		E577C17920F3361200724D3B /* VCEnlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEnlarge.png; sourceTree = "<group>"; };
+		E577C17A20F3361200724D3B /* VCRemove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCRemove.png; sourceTree = "<group>"; };
+		E577C17B20F3361200724D3B /* VCRemove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCRemove@2x.png"; sourceTree = "<group>"; };
+		E577C17C20F3361200724D3B /* VCEnlarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCEnlarge@2x.png"; sourceTree = "<group>"; };
+		E577C17D20F3361200724D3B /* VCEnlarge@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCEnlarge@3x.png"; sourceTree = "<group>"; };
+		E577C17E20F3361200724D3B /* VCRemove@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCRemove@3x.png"; sourceTree = "<group>"; };
+		E577C17F20F3361200724D3B /* VCEditImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEditImage2.png; sourceTree = "<group>"; };
+		E577C18020F3361200724D3B /* VCEditImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEditImage1.png; sourceTree = "<group>"; };
+		E577C18120F3361200724D3B /* VCPickerChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCPickerChecked@2x.png"; sourceTree = "<group>"; };
+		E577C18220F3361200724D3B /* VCPickerChecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCPickerChecked@3x.png"; sourceTree = "<group>"; };
 		E5AE5F9120EB23ED00E9AA01 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		E5AE5F9320EB240200E9AA01 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		E5AE5F9820EB750A00E9AA01 /* VCImagesPickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCImagesPickerController.h; sourceTree = "<group>"; };
@@ -96,14 +104,6 @@
 		E5FE015820EE0F3900EDDE3F /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		E5FE015C20EF126A00EDDE3F /* VCVanvasElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCVanvasElement.h; sourceTree = "<group>"; };
 		E5FE015D20EF126A00EDDE3F /* VCVanvasElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCVanvasElement.m; sourceTree = "<group>"; };
-		E5FE015F20EF172A00EDDE3F /* VCEnlarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCEnlarge@2x.png"; sourceTree = "<group>"; };
-		E5FE016020EF172A00EDDE3F /* VCEnlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEnlarge.png; sourceTree = "<group>"; };
-		E5FE016120EF172A00EDDE3F /* VCRemove@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCRemove@3x.png"; sourceTree = "<group>"; };
-		E5FE016220EF172A00EDDE3F /* VCEditImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEditImage2.png; sourceTree = "<group>"; };
-		E5FE016320EF172A00EDDE3F /* VCEnlarge@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCEnlarge@3x.png"; sourceTree = "<group>"; };
-		E5FE016420EF172A00EDDE3F /* VCEditImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCEditImage1.png; sourceTree = "<group>"; };
-		E5FE016520EF172A00EDDE3F /* VCRemove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCRemove.png; sourceTree = "<group>"; };
-		E5FE016620EF172A00EDDE3F /* VCRemove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VCRemove@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,21 +133,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E5345EA220DCDFA80011A0D9 /* Resource */ = {
+		E577C17820F3361200724D3B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E5345EA320DCDFB20011A0D9 /* VCPickerChecked@2x.png */,
-				E5345EA420DCDFB20011A0D9 /* VCPickerChecked@3x.png */,
-				E5FE016420EF172A00EDDE3F /* VCEditImage1.png */,
-				E5FE016220EF172A00EDDE3F /* VCEditImage2.png */,
-				E5FE016520EF172A00EDDE3F /* VCRemove.png */,
-				E5FE016620EF172A00EDDE3F /* VCRemove@2x.png */,
-				E5FE016120EF172A00EDDE3F /* VCRemove@3x.png */,
-				E5FE016020EF172A00EDDE3F /* VCEnlarge.png */,
-				E5FE015F20EF172A00EDDE3F /* VCEnlarge@2x.png */,
-				E5FE016320EF172A00EDDE3F /* VCEnlarge@3x.png */,
+				E577C17920F3361200724D3B /* VCEnlarge.png */,
+				E577C17A20F3361200724D3B /* VCRemove.png */,
+				E577C17B20F3361200724D3B /* VCRemove@2x.png */,
+				E577C17C20F3361200724D3B /* VCEnlarge@2x.png */,
+				E577C17D20F3361200724D3B /* VCEnlarge@3x.png */,
+				E577C17E20F3361200724D3B /* VCRemove@3x.png */,
+				E577C17F20F3361200724D3B /* VCEditImage2.png */,
+				E577C18020F3361200724D3B /* VCEditImage1.png */,
+				E577C18120F3361200724D3B /* VCPickerChecked@2x.png */,
+				E577C18220F3361200724D3B /* VCPickerChecked@3x.png */,
 			);
-			name = Resource;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		E5AE5F9020EB23ED00E9AA01 /* Frameworks */ = {
@@ -183,7 +183,7 @@
 		E5EDDD3620DBA3A200E7941E /* VCPicPlay */ = {
 			isa = PBXGroup;
 			children = (
-				E5345EA220DCDFA80011A0D9 /* Resource */,
+				E577C17820F3361200724D3B /* Resource */,
 				E5EDDD7E20DBA60900E7941E /* Other */,
 				E5EDDD7520DBA54500E7941E /* Controller */,
 				E5EDDD7920DBA54500E7941E /* Model */,
@@ -370,19 +370,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5FE016C20EF172A00EDDE3F /* VCEditImage1.png in Resources */,
-				E5FE016B20EF172A00EDDE3F /* VCEnlarge@3x.png in Resources */,
-				E5FE016920EF172A00EDDE3F /* VCRemove@3x.png in Resources */,
 				E5EDDD4420DBA3A400E7941E /* LaunchScreen.storyboard in Resources */,
-				E5FE016720EF172A00EDDE3F /* VCEnlarge@2x.png in Resources */,
 				E5EDDD4120DBA3A400E7941E /* Assets.xcassets in Resources */,
+				E577C18420F3361200724D3B /* VCRemove.png in Resources */,
 				E5EDDD3F20DBA3A200E7941E /* Main.storyboard in Resources */,
-				E5FE016820EF172A00EDDE3F /* VCEnlarge.png in Resources */,
-				E5FE016A20EF172A00EDDE3F /* VCEditImage2.png in Resources */,
-				E5345EA620DCDFB20011A0D9 /* VCPickerChecked@3x.png in Resources */,
-				E5FE016D20EF172A00EDDE3F /* VCRemove.png in Resources */,
-				E5345EA520DCDFB20011A0D9 /* VCPickerChecked@2x.png in Resources */,
-				E5FE016E20EF172A00EDDE3F /* VCRemove@2x.png in Resources */,
+				E577C18320F3361200724D3B /* VCEnlarge.png in Resources */,
+				E577C18B20F3361200724D3B /* VCPickerChecked@2x.png in Resources */,
+				E577C18C20F3361200724D3B /* VCPickerChecked@3x.png in Resources */,
+				E577C18720F3361200724D3B /* VCEnlarge@3x.png in Resources */,
+				E577C18620F3361200724D3B /* VCEnlarge@2x.png in Resources */,
+				E577C18520F3361200724D3B /* VCRemove@2x.png in Resources */,
+				E577C18820F3361200724D3B /* VCRemove@3x.png in Resources */,
+				E577C18A20F3361200724D3B /* VCEditImage1.png in Resources */,
+				E577C18920F3361200724D3B /* VCEditImage2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 894JL567UQ;
+				DEVELOPMENT_TEAM = DRQCN6N2LA;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = "$SRCROOT/VCPicPlay/Other/VCPicPlay-Prefix.pch";
 				INFOPLIST_FILE = VCPicPlay/Info.plist;
@@ -608,7 +608,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 894JL567UQ;
+				DEVELOPMENT_TEAM = DRQCN6N2LA;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = "$SRCROOT/VCPicPlay/Other/VCPicPlay-Prefix.pch";
 				INFOPLIST_FILE = VCPicPlay/Info.plist;
